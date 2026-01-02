@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { MessageCircle, Phone } from "lucide-react";
+import { MessageCircle, Phone, Laptop, Smartphone, Code2, Palette, Settings, Layers } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Hero = () => {
@@ -233,45 +233,143 @@ const Hero = () => {
         </motion.div>
       </div>
 
-      {/* Floating decorative elements */}
+      {/* Floating tech icons */}
       <motion.div
-        animate={{ 
-          y: [0, -15, 0],
-          rotate: [0, 5, 0]
-        }}
-        transition={{ 
-          duration: 4,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
-        className="absolute top-1/4 left-10 w-3 h-3 rounded-full bg-primary/30 hidden md:block"
-      />
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 1.5, duration: 0.5 }}
+        className="absolute top-[15%] left-[8%] hidden md:block"
+      >
+        <motion.div
+          animate={{ 
+            y: [0, -15, 0],
+            rotate: [0, 5, 0]
+          }}
+          transition={{ 
+            duration: 4,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+          className="p-4 rounded-2xl bg-card shadow-card border border-border/50"
+        >
+          <Laptop className="w-8 h-8 text-primary" />
+        </motion.div>
+      </motion.div>
+
       <motion.div
-        animate={{ 
-          y: [0, 20, 0],
-          rotate: [0, -5, 0]
-        }}
-        transition={{ 
-          duration: 5,
-          repeat: Infinity,
-          ease: "easeInOut",
-          delay: 1
-        }}
-        className="absolute top-1/3 right-16 w-4 h-4 rounded-full bg-primary/20 hidden md:block"
-      />
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 1.7, duration: 0.5 }}
+        className="absolute top-[20%] right-[10%] hidden md:block"
+      >
+        <motion.div
+          animate={{ 
+            y: [0, 20, 0],
+            rotate: [0, -8, 0]
+          }}
+          transition={{ 
+            duration: 5,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 0.5
+          }}
+          className="p-3 rounded-xl bg-card shadow-card border border-border/50"
+        >
+          <Smartphone className="w-6 h-6 text-primary" />
+        </motion.div>
+      </motion.div>
+
       <motion.div
-        animate={{ 
-          y: [0, -10, 0],
-          x: [0, 5, 0]
-        }}
-        transition={{ 
-          duration: 6,
-          repeat: Infinity,
-          ease: "easeInOut",
-          delay: 2
-        }}
-        className="absolute bottom-1/3 left-20 w-2 h-2 rounded-full bg-primary/40 hidden md:block"
-      />
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 1.9, duration: 0.5 }}
+        className="absolute top-[45%] left-[5%] hidden lg:block"
+      >
+        <motion.div
+          animate={{ 
+            y: [0, -12, 0],
+            x: [0, 8, 0]
+          }}
+          transition={{ 
+            duration: 6,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 1
+          }}
+          className="p-3 rounded-xl bg-primary/10 border border-primary/20"
+        >
+          <Code2 className="w-6 h-6 text-primary" />
+        </motion.div>
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 2.1, duration: 0.5 }}
+        className="absolute top-[50%] right-[6%] hidden lg:block"
+      >
+        <motion.div
+          animate={{ 
+            y: [0, 15, 0],
+            rotate: [0, 10, 0]
+          }}
+          transition={{ 
+            duration: 4.5,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 0.8
+          }}
+          className="p-3 rounded-xl bg-card shadow-card border border-border/50"
+        >
+          <Palette className="w-6 h-6 text-primary" />
+        </motion.div>
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 2.3, duration: 0.5 }}
+        className="absolute bottom-[25%] left-[12%] hidden md:block"
+      >
+        <motion.div
+          animate={{ 
+            y: [0, -18, 0],
+            rotate: [0, -6, 0]
+          }}
+          transition={{ 
+            duration: 5.5,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 1.5
+          }}
+          className="p-3 rounded-xl bg-primary/10 border border-primary/20"
+        >
+          <Settings className="w-5 h-5 text-primary" />
+        </motion.div>
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 2.5, duration: 0.5 }}
+        className="absolute bottom-[30%] right-[12%] hidden md:block"
+      >
+        <motion.div
+          animate={{ 
+            y: [0, 12, 0],
+            x: [0, -5, 0]
+          }}
+          transition={{ 
+            duration: 4.8,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 2
+          }}
+          className="p-3 rounded-xl bg-card shadow-card border border-border/50"
+        >
+          <Layers className="w-5 h-5 text-primary" />
+        </motion.div>
+      </motion.div>
 
       {/* Scroll indicator with bounce */}
       <motion.div
